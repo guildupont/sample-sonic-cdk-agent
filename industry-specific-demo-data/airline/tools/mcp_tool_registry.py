@@ -141,11 +141,11 @@ async def get_air_destinations_and_respective_cheapest_prices(
 # Flight status
 @mcp_server.tool(
     name="getAirlineFlightDateStatus",
-    description="Use this tool when a user asks about flight status. Remind the user of the departure date and flight number, and specifically highlight a delay on arrival if any."
+    description="Use this tool when a user asks about flight status. Remind the user of the departure date and flight number before answering the question, and specifically highlight a delay on arrival if any."
 )
 async def get_airline_flight_date_status(
    flight_number: Annotated[Union[str], Field(description="Flight number the customer asked for")],
-   departure_date: Annotated[Union[date], Field(description="Departure date of the flight the customer asked about")]    
+   departure_date: Annotated[Union[date], Field(description="Departure date of the flight the customer asked about. If the customer asks about today or tomorrow, convert it to the right format before calling the tool.")]    
 ) -> dict:
     """Returns the status of a flight date including scheduled and actual times, progress, etc."""
     try:
