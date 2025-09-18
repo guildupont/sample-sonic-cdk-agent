@@ -1,14 +1,14 @@
 PRICES = {
-    "VCE": {"min": 250, "max": 450},
-    "BCN": {"min": 200, "max": 400},
-    "NCE": {"min": 180, "max": 350},
-    "PMI": {"min": 150, "max": 300},
-    "ATH": {"min": 300, "max": 500},
-    "SKG": {"min": 300, "max": 600},
-    "CFU": {"min": 300, "max": 700},
-    "HER": {"min": 300, "max": 800},
-    "CUN": {"min": 700, "max": 1200},
-    "MIA": {"min": 500, "max": 1000}
+    "VCE": {"min": 250},
+    "BCN": {"min": 200},
+    "NCE": {"min": 180},
+    "PMI": {"min": 150},
+    "ATH": {"min": 300},
+    "SKG": {"min": 300},
+    "CFU": {"min": 300},
+    "HER": {"min": 300},
+    "CUN": {"min": 700},
+    "MIA": {"min": 500}
 }
 
 def get_air_destinations_and_respective_cheapest_prices(iOriginAirportCode: str) -> str:
